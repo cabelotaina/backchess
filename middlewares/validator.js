@@ -11,7 +11,7 @@ module.exports = {
       // console.log('LOG: Valid Square');
       next();
     } else {
-      const error = new Error('Invalid Square');
+      const error = new Error('This is not a acceptable Knight square position.');
       next(error);
     }
   },
