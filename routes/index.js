@@ -4,7 +4,11 @@ const router = express.Router();
 
 // eslint-disable-next-line no-unused-vars
 function root(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.status(200).send({
+    success: 'true',
+    message: 'squares retrieved successfully',
+    squares: []
+  });
 }
 
 router.get('/', root);

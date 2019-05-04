@@ -26,7 +26,7 @@ And run the app:
 ## Usage
 
 ```
-  GET /api/v1/knight/:position
+  GET /api/v1/knight/:square
 ```
 
 ## Resources
