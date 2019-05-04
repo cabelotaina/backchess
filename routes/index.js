@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+const router = express.Router();
+
+// eslint-disable-next-line no-unused-vars
+function root(req, res, next) {
   res.render('index', { title: 'Express' });
-});
+}
+
+router.get('/', root);
 
 module.exports = router;

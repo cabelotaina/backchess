@@ -20,13 +20,13 @@ Install dependencies:
 
 And run the app:
 ```bash
-  DEBUG=back-chess:* npm dev
+  DEBUG=back-chess:* npm run dev
 ```
 
 ## Usage
 
 ```
-  GET /api/v1/knight/(position)
+  GET /api/v1/knight/:position
 ```
 
 ## Resources
