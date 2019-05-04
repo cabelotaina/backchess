@@ -6,6 +6,8 @@ const indexRouter = require('./routes/index');
 
 const app = express();
 
+app.use(logger('dev'));
+
 app.use('/api/v1', indexRouter);
 
 function catch404Error(req, res, next) {
@@ -20,7 +22,7 @@ function errorHandler(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.json({success: false, message: err.message});
+  res.json({ success: false, message: err.message });
 }
 
 // catch 404 and forward to error handler

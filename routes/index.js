@@ -8,10 +8,16 @@ function root(req, res, next) {
     success: 'true',
     message: 'squares retrieved successfully',
     initialSquare: req.params.square,
-    squares: []
+    squares: [],
   });
 }
 
-router.get('/knight/:square', root);
+function isValidSquare(req, res, next) {
+  console.log(req.params.square);
+  next();
+}
+
+router.get('/knight/:square', isValidSquare, root);
+
 
 module.exports = router;
