@@ -7,10 +7,11 @@ function root(req, res, next) {
   res.status(200).send({
     success: 'true',
     message: 'squares retrieved successfully',
+    initialSquare: req.params.square,
     squares: []
   });
 }
 
-router.get('/', root);
+router.get('/knight/:square', root);
 
 module.exports = router;
