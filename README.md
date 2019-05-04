@@ -31,9 +31,10 @@ And run the app:
 
 ## Resources
 
-This is a list of resources used in this project.
+This is a list of resources used in this project:
 
-https://hackernoon.com/how-to-develop-a-boilerplate-for-api-with-node-js-express-and-mongodb-4c771ae1c2df
+[starting a boilerplate](https://hackernoon.com/how-to-develop-a-boilerplate-for-api-with-node-js-express-and-mongodb-4c771ae1c2df)
+[api configuration](https://medium.com/@purposenigeria/build-a-restful-api-with-node-js-and-express-js-d7e59c7a3dfb)
 
 ## License
 
