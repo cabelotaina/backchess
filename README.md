@@ -23,7 +23,19 @@ And run the app:
   DEBUG=back-chess:* npm run dev
 ```
 
+run on production side
+
+You can use [forever](https://github.com/foreverjs/forever#readme) to run your server on production.
+
+test
+
+```bash
+npm test
+```
+
 ## Usage
+
+Do a simple GET for this endpoint with your square position and get all square positions where the Knight can move in exactly 2 turns:
 
 ```
   GET /api/v1/knight/:square
