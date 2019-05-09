@@ -3,57 +3,62 @@ const Square = require('../models/square');
 
 function calculate(square, squaresMap){
 
-    x = square.x - 2;
-    y = square.y - 1;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x + 2;
-    y = square.y - 1;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x - 2;
-    y = square.y + 1;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x + 2;
-    y = square.y + 1;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
+    let squareResult = operateSubSub(square, 2, 1);
+    canAdd(squareResult, squaresMap);
 
-    x = square.x - 1;
-    y = square.y - 2;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x + 1;
-    y = square.y - 2;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x - 1;
-    y = square.y + 2;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
-    x = square.x + 1;
-    y = square.y + 2;
-    squareResult = new Square(String.fromCharCode(x), y);
-    if (squareResult.isValid() && !squaresMap.has(squareResult.toString())){
-      squaresMap.set(squareResult.toString(), squareResult);
-    }
+    squareResult = operateAddSub(square, 2, 1);
+    canAdd(squareResult, squaresMap);
+
+    squareResult = operateSubAdd(square, 2, 1);
+    canAdd(squareResult, squaresMap);
+
+    squareResult = operateAddAdd(square, 2, 1);
+    canAdd(squareResult, squaresMap);
+
+
+    squareResult = operateSubSub(square, 1, 2);
+    canAdd(squareResult, squaresMap);
+
+    squareResult = operateAddSub(square, 1, 2);
+    canAdd(squareResult, squaresMap);
+
+    squareResult = operateSubAdd(square, 1, 2);
+    canAdd(squareResult, squaresMap);
+
+    squareResult = operateAddAdd(square, 1, 2);
+    canAdd(squareResult, squaresMap);
 
     return squaresMap;
+}
+
+function canAdd(square, map) {
+    if (square.isValid() && !map.has(square.toString())){
+      map.set(square.toString(), square);
+    }
+}
+
+function operateAddSub(square, a, b) {
+    const x = square.x + a;
+    const y = square.y - b;
+    return new Square(String.fromCharCode(x), y);
+}
+
+function operateAddAdd(square, a, b) {
+    const x = square.x + a;
+    const y = square.y + b;
+    return new Square(String.fromCharCode(x), y);
+}
+
+function operateSubSub(square, a, b) {
+    const x = square.x - a;
+    const y = square.y - b;
+    return new Square(String.fromCharCode(x), y);
+}
+
+function operateSubAdd(square, a, b) {
+    const x = square.x - a;
+    const y = square.y + b;
+    return new Square(String.fromCharCode(x), y);
 }
 
 module.exports = {

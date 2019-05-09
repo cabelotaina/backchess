@@ -15,5 +15,4 @@ function response(req, res, next) {
 
 router.get('/knight/:square', validator.isValidSquare, calculator.calculatePositions, response);
 
-
 module.exports = router;
