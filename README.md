@@ -4,7 +4,7 @@ Back Chess is a nodejs server using express for dealing with Knight moves on che
 
 ## Installation
 
-You need [nodejs]() and [npm](), we use [nvm](https://github.com/nvm-sh/nvm) to install nodejs and choice a specific version.
+You need [nodejs](https://nodejs.org) and [npm](https://www.npmjs.com/), we use [nvm](https://github.com/nvm-sh/nvm) to install nodejs and choice a specific version.
 
 Inside the root directory:
 
