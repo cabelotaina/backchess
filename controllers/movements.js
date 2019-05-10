@@ -6,4 +6,4 @@ module.exports = function moviments(req, res, next) {
     initialSquare: req.params.square,
     squares: res.locals.squareMap,
   });
-}
+};

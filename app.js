@@ -1,8 +1,9 @@
 const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
+const cors = require('cors');
 const indexRouter = require('./routes/index');
-var cors = require('cors');
+
 
 const app = express();
 
