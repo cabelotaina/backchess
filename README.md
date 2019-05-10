@@ -15,7 +15,7 @@ Inside the root directory:
 Install dependencies:
 
 ```bash
-  npm install
+  npm i
 ```
 
 And run the app:
@@ -23,15 +23,9 @@ And run the app:
   DEBUG=back-chess:* npm run dev
 ```
 
-run on production side
+## Production
 
-You can use [forever](https://github.com/foreverjs/forever#readme) to run your server on production.
-
-test
-
-```bash
-npm test
-```
+You can use [forever](https://github.com/foreverjs/forever#readme) to run your server on production. On another server: nginx, apache and etc.
 
 ## Usage
 
@@ -41,12 +35,9 @@ Do a simple GET for this endpoint with your square position and get all square p
   GET /api/v1/knight/:square
 ```
 
-## Resources
+## CONTRIBUTE
 
-This is a list of resources used in this project:
-
-[starting a boilerplate](https://hackernoon.com/how-to-develop-a-boilerplate-for-api-with-node-js-express-and-mongodb-4c771ae1c2df)
-[api configuration](https://medium.com/@purposenigeria/build-a-restful-api-with-node-js-and-express-js-d7e59c7a3dfb)
+See the ```CONTRIBUTING.md``` file.
 
 ## License
 
